@@ -77,8 +77,4 @@ if [ -z "$AWS_ACCOUNT_NO" ]; then
     exit 1
 fi
 
-AWS_CREDS=$(aws sts assume-role --role-arn arn:aws:iam::${AWS_ACCOUNT_NO}:role/${ROLE_NAME} --role-session-name AssumeSession --output json)
-aws configure set aws_access_key_id $(echo "$AWS_CREDS" | jq '.Credentials.AccessKeyId?' -r) --profile ${PROFILE_NAME}
-aws configure set aws_secret_access_key $(echo "$AWS_CREDS" | jq '.Credentials.SecretAccessKey?' -r) --profile ${PROFILE_NAME}
-aws configure set aws_session_token $(echo "$AWS_CREDS" | jq '.Credentials.SessionToken?' -r) --profile ${PROFILE_NAME}
-aws configure set region eu-west-1 --profile ${PROFILE_NAME}
+echo "Heeeeloooo"
