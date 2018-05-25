@@ -12,9 +12,9 @@ case $1 in
 # Normal option processing
     -h | --help)
     echo "Usage:" >&2
-    echo "assume [-h|--help] [-v|--version] -a|--account <aws account number> [-r|--role <IAM role>] [-p|--profile <aws cli profile name>] []" >&2
+    echo "wait [-h|--help] [-v|--version] -a|--account <aws account number> [-r|--role <IAM role>] [-p|--profile <aws cli profile name>] []" >&2
     echo "" >&2
-    echo " Assumes a role in the specified AWS account and creates temporary credentials in the named profile." >&2
+    echo " Wait a role in the specified AWS account and creates temporary credentials in the named profile." >&2
     echo "   -h|--help      prints this help" >&2
     echo "   -v|--version   prints the current version of this script" >&2
     echo "   -a|--account   the AWS account number to deploy to. (mandatory)" >&2
@@ -24,7 +24,7 @@ case $1 in
     exit 0
     ;;
     -v | --version)
-    echo "assume version $VERSION" >&2
+    echo "wait version $VERSION" >&2
     exit 0
     ;;
     -a | --account)
