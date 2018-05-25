@@ -73,7 +73,7 @@ shift
 done
 
 if [ -z "$AWS_ACCOUNT_NO" ]; then
-    echo "account must be specified"
+    echo "account must not be specified"
     exit 1
 fi
 
