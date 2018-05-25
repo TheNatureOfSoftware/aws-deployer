@@ -16,7 +16,6 @@ RUN ln -s /assume.sh /usr/bin/assume && \
     chmod +x /assume.sh
 
 RUN ln -s /wait.sh /usr/bin/wait && \
-    chmod +x /entrypoint.sh && \
     chmod +x /wait.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]
